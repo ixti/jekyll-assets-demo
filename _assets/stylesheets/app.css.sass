@@ -21,6 +21,10 @@ body
   width: 940px
 
 
+#js-tag-search
+  display: none
+
+
 .js
   body
     @include opacity(0)
@@ -28,3 +32,6 @@ body
     &.is-ready
       @include opacity(100)
       @include transition(opacity 1s)
+
+  #js-tag-search
+    display: block

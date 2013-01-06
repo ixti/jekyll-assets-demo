@@ -1,4 +1,24 @@
 #= require vendor/jquery
+#= require vendor/bootstrap/bootstrap-typeahead
 
 $ ->
   $("body").addClass "is-ready"
+
+  $("#js-tag-search input").typeahead
+    source: <%=
+      JSON.dump site.posts.map { |p|
+        [p.to_liquid["title"], p.url, p.tags.join(",")]
+      }
+    %>
+    sorter: (items) ->
+      $.map items, (o) ->
+        JSON.stringify o
+    matcher: (item) ->
+      0 <= item[2].indexOf @query
+    updater: (item) ->
+      item = JSON.parse item
+      window.location = item[1]
+      null
+    highlighter: (item) ->
+      item = JSON.parse item
+      "<a href=\"#{item[1]}\">#{item[0]}</a>"
