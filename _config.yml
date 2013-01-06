@@ -1,2 +1,11 @@
 ---
 markdown: redcarpet
+
+#
+# Jekyll-Assets configuration
+#
+
+assets:
+  compress:
+    css: sass
+    js:  uglifier
