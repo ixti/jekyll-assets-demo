@@ -1,0 +1,30 @@
+//= require vendor/bootstrap
+
+
+@import "vendor/bootstrap/mixins"
+
+
+body
+  background-color: #eee
+  background-image: url(image_path('noise.png'))
+
+
+#content
+  background-color: #fff
+  border: 1px solid #ccc
+
+  @include border-radius(6px)
+  @include box-shadow(0 1px 3px rgba(0,0,0,.1))
+
+  margin: 25px auto
+  padding: 25px
+  width: 940px
+
+
+.js
+  body
+    @include opacity(0)
+
+    &.is-ready
+      @include opacity(100)
+      @include transition(opacity 1s)

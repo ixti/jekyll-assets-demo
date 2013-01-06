@@ -2,9 +2,24 @@
 <html>
   <head>
     <title>My Blog</title>
+    {% stylesheet app %}
+    <script type="text/javascript">{% asset vendor/modernizr %}</script>
   </head>
   <body>
-    <h1>My Blog</h1>
-    {{ content }}
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/" class="brand">My Blog</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    {% javascript app %}
   </body>
 </html>
