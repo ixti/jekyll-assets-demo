@@ -1,6 +1,10 @@
 ---
 markdown: redcarpet
 
+# Change these to match your domain setup
+baseurl: "/jekyll-assets/"
+url: "http://localhost"
+
 #
 # Jekyll-Assets configuration
 #

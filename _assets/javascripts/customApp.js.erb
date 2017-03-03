@@ -1,0 +1,6 @@
+// loop through all post and console out each post's title
+function consoleListOfAllPosts() {
+	<% site.posts.each do |post| %>
+		console.log(" <%= post.title %> ");
+	<% end %>
+}

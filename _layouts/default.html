@@ -2,14 +2,14 @@
 <html>
   <head>
     <title>My Blog</title>
-    {% stylesheet app %}
+    <link rel="stylesheet" href="{{ site.baseurl }}{% asset_path app.css %}">
     <script type="text/javascript">{% asset vendor/modernizr %}</script>
   </head>
   <body>
     <div class="navbar navbar-static-top">
       <div class="navbar-inner">
         <div class="container">
-          <a href="/" class="brand">My Blog</a>
+          <a href="{{ site.baseurl }}" class="brand">My Blog</a>
 
           <form id="js-tag-search" class="form-search navbar-form pull-right">
             <input type="text" class="input-medium search-query" placeholder="Type tags to search"/>
@@ -24,6 +24,10 @@
       </div>
     </div>
 
-    {% javascript app %}
+    <script type="text/javascript" src="{{ site.baseurl }}{% asset_path app.js %}"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}{% asset_path customApp.js %}"></script>
+    <script>
+      consoleListOfAllPosts();
+    </script>
   </body>
 </html>
