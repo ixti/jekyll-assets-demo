@@ -7,7 +7,7 @@ $ ->
   $("#js-tag-search input").typeahead
     source: <%=
       JSON.dump site.posts.map { |p|
-        [p.to_liquid["title"], p.url, p.tags.join(",")]
+        [p.to_liquid["title"], site.baseurl + p.url, p.tags.join(",")]
       }
     %>
     sorter: (items) ->
