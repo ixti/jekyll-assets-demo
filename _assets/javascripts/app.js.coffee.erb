@@ -6,9 +6,13 @@ $ ->
 
   $("#js-tag-search input").typeahead
     source: <%=
-      JSON.dump site.posts.map { |p|
-        [p.to_liquid["title"], p.url, p.tags.join(",")]
-      }
+      JSON.dump(@environment.jekyll.posts.docs.map { |post|
+        [
+          post.to_liquid["title"],
+          post.url,
+          post.data["tags"].join(",")
+        ]
+      })
     %>
     sorter: (items) ->
       $.map items, (o) ->
