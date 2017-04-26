@@ -1,7 +1,7 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'redcarpet'
+gem "jekyll"
+gem "redcarpet"
 
 #
 # jekyll-assets plugin itself

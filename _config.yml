@@ -6,6 +6,11 @@ markdown: redcarpet
 #
 
 assets:
-  compress:
-    css: sass
-    js:  uglifier
+
+  assets:
+    - "*.png"
+
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
