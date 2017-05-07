@@ -1,5 +1,15 @@
----
+safe: true
+lsi: false
+pygments: true
 markdown: redcarpet
+timezone: Asia/jakarta
+
+baseurl: /docs.tigefa.org
+permalink: /articles/:title
+gems: [coffee-script, uglifier, jekyll-assets, sass]
+
+destination: ./_gh_pages
+plugins:     ./_plugins
 
 #
 # Jekyll-Assets configuration
